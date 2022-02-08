@@ -3,6 +3,7 @@ import { Contact, DeleteButton } from "./ContactItem.styled";
 import PropTypes from "prop-types";
 
 const ContactItem = ({ contact, onDeleteContact }) => {
+  console.log(contact)
   return (
     <>
       <Contact>
@@ -16,11 +17,11 @@ const ContactItem = ({ contact, onDeleteContact }) => {
 };
 
 ContactItem.propTypes = {
-  Contact: PropTypes({
+  contact: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
-  }).isRequired,
+  }),
   onDeleteContact: PropTypes.func.isRequired,
 };
 

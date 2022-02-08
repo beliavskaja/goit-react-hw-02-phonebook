@@ -40,7 +40,7 @@ class App extends PureComponent {
       number: data.number,
     };
 
-    if (contacts.find((contact) => contact.name === addContact.name)) {
+    if (contacts.find((contact) => contact.name.toLocaleLowerCase() === addContact.name.toLocaleLowerCase())) {
       alert(`${addContact.name} is already in contacts!`);
       return;
     }

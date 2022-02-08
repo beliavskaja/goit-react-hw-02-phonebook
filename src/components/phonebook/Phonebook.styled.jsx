@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PhonebookSection = styled.div`
+export const Form = styled.form`
   margin: 20px;
 `;
 
@@ -10,7 +10,7 @@ export const ContactInput = styled.input`
   margin-bottom: 10px;
 `;
 
-export const AddButton = styled.button`
+export const AddButton = styled.input`
   border-radius: 5px;
   border: 2px solid #fff;
   padding: 5px 10px;

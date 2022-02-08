@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { PhonebookSection, ContactInput, AddButton } from "./Phonebook.styled";
+import { Form, ContactInput, AddButton } from "./Phonebook.styled";
 
 class Phonebook extends React.PureComponent {
   state = {
@@ -28,7 +28,7 @@ class Phonebook extends React.PureComponent {
 
   render() {
     return (
-      <PhonebookSection>
+      <Form onSubmit={this.handleSubmit}>
         <ContactInput
           type="text"
           name="name"
@@ -47,10 +47,8 @@ class Phonebook extends React.PureComponent {
           value={this.state.number}
           onChange={this.handleChange}
         />
-        <AddButton type="button" onClick={this.handleSubmit}>
-          Add contact
-        </AddButton>
-      </PhonebookSection>
+        <AddButton type="submit" value="Add Contact"/>
+      </Form>
     );
   }
 }

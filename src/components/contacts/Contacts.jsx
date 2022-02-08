@@ -4,6 +4,7 @@ import ContactItem from "./ContactItem";
 import PropTypes from "prop-types";
 
 const Contacts = ({ contacts, onDeleteContact }) => {
+  console.log(contacts)
   return (
     <ContactList>
       {contacts.map((contact) => (
@@ -16,7 +17,7 @@ const Contacts = ({ contacts, onDeleteContact }) => {
 };
 
 Contacts.propTypes = {
-  Contacts: PropTypes.arrayOf(
+  contacts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
